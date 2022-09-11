@@ -1,5 +1,5 @@
 var audio = document.getElementById('audio');
-var playPauseBTN = document.getElementById('playPauseBTN')
+var playPauseBTN = document.getElementById('playPauseBTN');
 var count = 0;
 
 function playPause(){
@@ -13,4 +13,3 @@ function playPause(){
         playPauseBTN.innerHTML = " &#9658;";
     }
 }
-

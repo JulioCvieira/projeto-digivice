@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Links -->
     <link rel="icon" href="./favicons/favicon-16x16.png">
@@ -16,24 +17,25 @@
 
     <title>Didivice</title>
 
-    
+
 
 </head>
 
 <body>
     <style class="background">
         body {
-          background-image: url('img/background.jpg');
-          background-repeat: round;
+            background-image: url('img/background.jpg');
+            background-repeat: round;
         }
 
-        @media screen and (max-width: 600px) { body {
-            background-image: url('img/backgroungmobile.png');
+        @media screen and (max-width: 600px) {
+            body {
+                background-image: url('img/backgroungmobile.png');
+            }
         }
-    }
     </style>
 
-    <main>
+    <main id="details" class="details">
 
         <img src="img/Gabumon.gif" id="figura" alt="digimon" class="digimon-img">
 
@@ -41,15 +43,19 @@
             <source src="audio/clap.wav" type="audio/mpeg">
         </audio>
 
+        <audio id="bit">
+            <source src="audio/click.wav" type="audio/mpeg">
+        </audio>
+
         <h1 class="digimon-data">
 
-            <span id="level" class="digimon-level">Ultimate</span> -
-            <span id="name" class="digimon-name">Garurumon</span>
+            <span id="level" class="digimon-level">Rookie</span> -
+            <span id="name" class="digimon-name">Gabumon</span>
 
         </h1>
 
-        <form class="form">
-            <input type="search" class="input-search" placeholder="Name or Level" required />
+        <form id="form" class="form">
+            <input id="search" type="search" class="input-search" placeholder="Name or Number" required />
         </form>
 
         <div class="buttons">
@@ -57,8 +63,10 @@
             &nbsp;
             &nbsp;
 
-            <button class="button btn-prev" onclick="prev();">Prev &lt;</button>
-            <button class="button btn-next" onclick="next();">Next &gt;</button>
+            <button id="prev" class="prev" onclick="prev();">Prev &lt;</button>
+
+
+            <button id="next" class="next" onclick="next()">Next &gt;</button>
         </div>
 
         <img src="img/digivice002.png" alt="digivice" class="digivice">
@@ -66,7 +74,7 @@
     </main>
     <script src="./js/audio.js"></script>
     <script src="./js/imgs.js"></script>
-
+    <script src="./js/scroll.js"></script>
 
 </body>
 
